@@ -1,0 +1,18 @@
+{
+  "name": "t-animations-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx clj-kondo --lint src",
+    "style-fix": "cljfmt src/t_animations/core.cljs  src/t_animations/generator.cljs src/t_animations/utils.cljs",
+    "release-cljs": "cd ../t-animations-lib && npx shadow-cljs release t-animations",
+    "watch-cljs": "cd ../t-animations-lib && npx shadow-cljs watch t-animations"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
+}
