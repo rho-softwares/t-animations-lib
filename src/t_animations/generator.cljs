@@ -47,6 +47,7 @@
    "mb"      "margin-bottom:"
    "bgcolor" "background-color:"
    "scale"   "scale:"
+   "rounded" "border-radius:"
    "transf"  "transform:"})
 
 (defn println-invalid-prop-keys [input-key]
