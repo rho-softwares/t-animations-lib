@@ -5,7 +5,7 @@
   "bin": "dst/t-animations.js",
   "scripts": {
     "bin": "dst/t-animations.js",
-    "patch-add": "npm version patch && git add -A",
+    "patch-push": "npm version patch && git push rho-softwares main",
     "lint": "npx clj-kondo --lint src",
     "style-fix": "cljfmt src/t_animations/core.cljs  src/t_animations/generator.cljs src/t_animations/utils.cljs",
     "release-cljs": "cd ../t-animations-lib && npx shadow-cljs release t-animations",
