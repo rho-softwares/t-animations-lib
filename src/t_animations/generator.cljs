@@ -109,7 +109,6 @@
     final-an-props))
 
 (defn exit-validate-dst-file [file-dst]
-  (prn)
   (print-colored-text :red (str "⚠️ ⚠️ ⚠️  Invalid css file name!!"))
   (print-colored-text :red (str "- '" file-dst "' is not a valid css file path."))
   (print-colored-text :red (str "- It should contain only letters, '/' (not '//'), '-' and end with '.css'"))
