@@ -1,18 +1,30 @@
 {
   "name": "t-animations-lib",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.10",
+  "description": "Fastest Declarative CSS Animations tool",
+  "bin": "dst/t-animations.js",
   "scripts": {
+    "bin": "dst/t-animations.js",
     "lint": "npx clj-kondo --lint src",
     "style-fix": "cljfmt src/t_animations/core.cljs  src/t_animations/generator.cljs src/t_animations/utils.cljs",
     "release-cljs": "cd ../t-animations-lib && npx shadow-cljs release t-animations",
     "watch-cljs": "cd ../t-animations-lib && npx shadow-cljs watch t-animations"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "declarative",
+    "css",
+    "animations",
+    "cli",
+    "flexiana",
+    "rho-softwares",
+    "t-animations",
+    "tailwind-css",
+    "tachyons-css",
+    "cljs",
+    "shadow-cljs"
+  ],
+  "author": "RhoSoftwares@Flexiana",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^5.2.0"
   }
 }
