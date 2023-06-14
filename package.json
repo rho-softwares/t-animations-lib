@@ -1,6 +1,6 @@
 {
   "name": "t-animations-lib",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Fastest Declarative CSS Animations tool",
   "bin": "dst/t-animations.js",
   "scripts": {
