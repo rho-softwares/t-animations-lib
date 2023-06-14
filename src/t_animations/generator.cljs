@@ -190,6 +190,7 @@
                                          @k-atom))
         keyframes-props-with-neg      (get-keyframes-props-with-neg keyframes-props)
         keyframes-props-with-decimals (get-keyframes-props-with-decimals keyframes-props-with-neg)
+        _ (print-colored-text :yellow (str "keyframes-props-with-decimals: " keyframes-props-with-decimals))
         final-keyframes               (get-keyframes-str-from-props keyframes-props-with-decimals)
         final-anim-props              (get-final-anim-props anim-props)
         opt-hover                     (if (starts-with? token "hover:anim-") ":hover" "")
