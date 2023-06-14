@@ -117,8 +117,9 @@
   (prn)
   (js/process.exit [0]))
 
-(defn validate-dst-file [file-dst]
-  (let [is-valid-css-file? (re-matches #"^[a-zA-Z]+(/[a-zA-Z_-]+)?\.css$" file-dst)
+(defn validate-dst-file [_file-dst]
+  (let [file-dst (.replace _file-dst "\"" "")
+        is-valid-css-file? (re-matches #"^[a-zA-Z]+(/[a-zA-Z_-]+)?\.css$" file-dst)
         _ (print-colored-text :green (str "file-dst: " file-dst))
         _ (prn file-dst)
         _ (print-colored-text :green (str "is-valid-css-file?: " is-valid-css-file?))
