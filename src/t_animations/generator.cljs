@@ -162,7 +162,10 @@
                      final-keyframes 
                      "}\n"))
   (.writeFileSync fs (validate-dst-file file-dst) (str @final-css-str)))
-      
+
+(defn replace-cent-with-percent [data]
+  (into {} (for [[k v] data]
+             [k (clojure.string/replace v "cent " "% ")])))
 
 (defn generate-individual-animation [token final-css-str file-dst]
   (let [clean-token (-> token
@@ -190,8 +193,10 @@
                                          @k-atom))
         keyframes-props-with-neg      (get-keyframes-props-with-neg keyframes-props)
         keyframes-props-with-decimals (get-keyframes-props-with-decimals keyframes-props-with-neg)
-        _ (print-colored-text :yellow (str "keyframes-props-with-decimals: " keyframes-props-with-decimals))
-        final-keyframes               (get-keyframes-str-from-props keyframes-props-with-decimals)
+        _ (print-colored-text :yellow (str "before: " keyframes-props-with-decimals))
+        keyframes-props-with-cents    (replace-cent-with-percent keyframes-props-with-decimals)
+        _ (print-colored-text :yellow (str "after: " keyframes-props-with-decimals))
+        final-keyframes               (get-keyframes-str-from-props keyframes-props-with-cents)
         final-anim-props              (get-final-anim-props anim-props)
         opt-hover                     (if (starts-with? token "hover:anim-") ":hover" "")
         escape-special-chars          #(-> %
