@@ -195,7 +195,7 @@
         keyframes-props-with-decimals (get-keyframes-props-with-decimals keyframes-props-with-neg)
         _ (print-colored-text :yellow (str "before: " keyframes-props-with-decimals))
         keyframes-props-with-cents    (replace-cent-with-percent keyframes-props-with-decimals)
-        _ (print-colored-text :yellow (str "after: " keyframes-props-with-decimals))
+        _ (print-colored-text :yellow (str "after: " keyframes-props-with-cents))
         final-keyframes               (get-keyframes-str-from-props keyframes-props-with-cents)
         final-anim-props              (get-final-anim-props anim-props)
         opt-hover                     (if (starts-with? token "hover:anim-") ":hover" "")
