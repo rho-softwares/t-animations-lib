@@ -118,7 +118,7 @@
   (js/process.exit [0]))
 
 (defn validate-dst-file [file-dst]
-  (let [is-valid-css-file? (re-matches #"^[a-zA-Z]+(/[a-zA-Z_-]+)*\.css$" file-dst)]
+  (let [is-valid-css-file? (re-matches #"^[a-zA-Z]+(/[a-zA-Z_-]+)?\.css$" file-dst)]
     (if is-valid-css-file?
       file-dst
       (exit-validate-dst-file file-dst ))))
